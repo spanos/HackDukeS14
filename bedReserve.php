@@ -13,15 +13,19 @@ if (mysqli_connect_errno())
   
 $BedID = $_REQUEST['BedID'];
   
-// Insert into db
-$sql = "UPDATE Beds 
-        SET IsOpen=1
-        WHERE BedId='$BedID'" ;
-        
-// Remove from db
-$sql = "UPDATE Beds
-SET IsOpen=0
-WHERE BedId ='$BedID'" ;
+if(isset($_POST['test'])){
+  // Insert into db
+  $sql = "UPDATE Beds 
+          SET IsOpen=1
+          WHERE BedId='$BedID'" ;
+}  
+
+else{
+  // Remove from db
+  $sql = "UPDATE Beds
+  SET IsOpen=0
+  WHERE BedId ='$BedID'" ;
+}
 
 if (!mysqli_query($con, $sql))
   {
