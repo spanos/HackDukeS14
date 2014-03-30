@@ -17,13 +17,21 @@ $BedID = $_REQUEST['BedID'];
 $sql = "UPDATE Beds 
         SET IsOpen=1
         WHERE BedId='$BedID'" ;
+        
+// Remove from db
+$sql = "UPDATE Beds
+SET IsOpen=0
+WHERE BedId ='$BedID'" ;
 
 if (!mysqli_query($con, $sql))
   {
   die('Error: ' . mysqli_error($con));
   }
+  
 echo "1 bed reserved";
+echo "1 bed released";
 
 // Close
 mysqli_close($con);
+
 ?> 
