@@ -48,18 +48,10 @@
                  
                         <h1>Check In Bed</h1>
                         <form class="purple" name="bed2" action="bedReserve.php" method="post">
-                        <input type="radio" name="BedID" value=1>1<br>
-                        <input type="radio" name="BedID" value=2>2<br>
-                        <input type="radio" name="BedID" value=3>3<br>
-                        <input type="submit" value="Check In Bed">
-                        </form> 
-                   
-                        <h1>Check Out Bed</h1>
-                        <form class="purple" name="bed1" action="bedRelease.php" method="post">
-                        <input type="radio" name="BedID" value=1>1<br>
-                        <input type="radio" name="BedID" value=2>2<br>
-                        <input type="radio" name="BedID" value=3>3<br>
-                        <input type="submit" value="Check Out Bed">
+                        <input type="checkbox" name="BedID" value=1>1<br>
+                        <input type="checkbox" name="BedID" value=2>2<br>
+                        <input type="checkbox" name="BedID" value=3>3<br>
+                        <input type="submit" value="Check In or Check Out Bed">
                         </form> 
                 </div>
         </body>
